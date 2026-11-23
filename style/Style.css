@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #F2E8C9;
+    color: #3E3A32;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+
+/*header*/
+
+.header {
+    display: flex;
+    background-color: #2F6F73;
+    justify-content: space-between;
+    padding: 16px 25px;
+    align-items: center;
+    color: #FFF8E7;
+    position: relative;
+    z-index: 10;
+}
+
+.header h3 {
+    font-size: 20px;
+}
+
+.header nav {
+    display: flex;
+    gap: 8px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #FFF8E7;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 2px solid #FFF8E7;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header a:hover {
+    color: #D8B75A;
+    border: 2px solid #D8B75A;
+}
+
+.header-guaruja {
+    min-height: 76px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px 25px;
+    background-color: #2F6F73;
+    color: #FFF8E7;
+}
+
+.header-guaruja .titulo-cidade {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: #D8B75A;
+    font-size: 32px;
+    text-align: center;
+}
+
+.header-guaruja nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.header-guaruja nav a {
+    color: #FFF8E7;
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 2px solid #FFF8E7;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header-guaruja nav a:hover {
+    color: #D8B75A;
+    border-color: #D8B75A;
+}
+/*article*/
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.ImagemHero {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-sombra {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px;
+}
+
+.banner-texto .pequeno-titulo {
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.banner-texto h1 {
+    text-align: left;
+    margin: 0;
+    color: #D8B75A;
+    font-size: 58px;
+}
+
+.banner-texto h3 {
+    font-size: 21px;
+    margin-top: 10px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.botao-hero {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 22px;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-hero:hover {
+    background-color: white;
+    color: #2F6F73;
+}
+
+
+/*introducao*/
+
+.introducao {
+    text-align: center;
+    max-width: 800px;
+    margin: 70px auto 40px;
+    padding: 0 20px;
+}
+
+.introducao h1 {
+    color: #2F6F73;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.introducao p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/*titulo da seçao*/
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-secao p {
+    color: #B19635;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.titulo-secao h1 {
+    color: #2F6F73;
+    font-size: 36px;
+    margin: 8px 0;
+}
+
+.titulo-secao h3 {
+    font-weight: normal;
+    font-size: 17px;
+}
+
+
+/*cidades e etc*/
+
+.cidades {
+    padding: 50px 7% 80px;
+    background-color: #E9DDBA;
+}
+
+.cidades-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cidade-card {
+    background-color: #FFF8E7;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.cidade-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px #2F6F73;
+}
+
+
+/*imagem das cidades tororoxd*/
+
+.cidade-imagem {
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bertioga {
+    background-image: url("../assets/ImagemCardBertioga.jpeg");
+}
+.cubatao {
+    background-image: url("../assets/ImagemCardCubatao.webp");
+}
+.guaruja {
+    background-image: url("../assets/ImagemCardGuaruja.webp");
+}
+.itanhaem {
+    background-image: url("../assets/ImagemCardItanhaem.jpg");
+}
+.mongagua {
+    background-image: url("../assets/ImagemCardMongagua.jpg");
+}
+.peruibe {
+    background-image: url("../assets/ImagemCardPeruibe.jpg");
+}
+.praia-grande {
+    background-image: url("../assets/ImagemCardPraiaGrander.jpg");
+}
+.santos {
+    background-image: url("../assets/ImagemCardSantos.jpg");
+}
+.sao-vicente {
+    background-image: url("../assets/ImagemCardSaoVicente.jpg");
+}
+
+
+/*textos dos cards*/
+
+.cidade-texto {
+    padding: 20px;
+}
+
+.cidade-texto span {
+    color: #B19635;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.cidade-texto h2 {
+    color: #2F6F73;
+    margin: 5px 0 8px;
+}
+
+.cidade-texto p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.cidade-texto a {
+    color: #2F6F73;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cidade-texto a:hover {
+    color: #B19635;
+}
+
+
+/*historia da baxiada e gg tri nask*/
+
+.informacoes {
+    background-color: #E9DDBA;
+    padding: 70px 7%;
+}
+
+.hero-container-litoral {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-box {
+    flex: 1;
+    background-color: #D8B75A;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+    text-align: center;
+    color: #3E3A32;
+}
+
+.hero-box span {
+    font-size: 13px;
+    font-weight: bold;
+    color: #6D5A1F;
+}
+
+.hero-box h3 {
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.hero-box p {
+    line-height: 1.5;
+}
+
+.hero-box a {
+    display: inline-block;
+    margin-top: 18px;
+    color: #3E3A32;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/*sobre nos*/
+
+.sobre-nos {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.sobre-nos h1 {
+    color: #2F6F73;
+    margin-bottom: 15px;
+}
+
+.sobre-nos p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/*footer*/
+
+footer {
+    color:  #2F6F73;
+    text-align: center;
+    padding: 35px;
+}
+
+footer h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.azul{
+    background-color: #2F6F73;
+    color: #FFF8E7;
+}
+
+
+/*coisa pra coisar a resolucao no celular*/
+
+@media (max-width: 900px) {
+
+    .cidades-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-container-litoral {
+        flex-direction: column;
+    }
+
+    .banner-texto h1 {
+        font-size: 45px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header gua {
+        flex-direction: column;
+        gap: 15px;
+        margin: 10px;
+    }
+
+    .header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner {
+        height: 500px;
+    }
+
+    .banner-texto {
+        left: 25px;
+        right: 25px;
+    }
+
+    .banner-texto h1 {
+        font-size: 38px;
+    }
+
+    .banner-texto h3 {
+        font-size: 18px;
+    }
+
+    .cidades-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cidades-container gua {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+
+/* Carrossel */
+
+.carrosel {
+    max-width: 1200px;
+    margin: 55px auto 0;
+    padding: 0;
+}
+
+.carrosel h2 {
+    margin-bottom: 20px;
+    color: #2F6F73;
+    font-size: 30px;
+    text-align: center;
+}
+
+.slides {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 14px;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: #2F6F73 #E9DDBA;
+}
+
+.slides img {
+    display: block;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    scroll-snap-align: center;
+    border: 5px solid white;
+}
+
+/* Celulares */
+
+@media (max-width: 900px) {
+    .cidades-container.gua {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        min-height: 110px;
+        padding: 15px;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 12px;
+    }
+
+    .header .titulo-cidade {
+        top: 10px;
+        font-size: 27px;
+    }
+
+    .header nav {
+        margin: 0;
+    }
+
+    .pagina-cidade {
+        padding: 25px 5% 40px;
+    }
+
+    .cidades-container.gua {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .carrosel h2 {
+        font-size: 24px;
+    }
+
+    .slides img {
+        height: 250px;
+    }
+
+}
+
